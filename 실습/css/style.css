@@ -1,6 +1,47 @@
+/* CSS 규칙에서 태그 이름으로 선택하려면 태그이름 { ... } 이런식으로 쓰면 됩니다.
+아이디 선택자를 사용하려면 HTML 태그에다 id 속성을 추가하고, CSS에서는 #아이디이름처럼 쓰면 됩니다.
+클래스 선택자를 사용하려면 HTML 태그에다 class 속성을 추가하고, CSS에서는 .클래스이름처럼 쓰면 됩니다. */
+
 body {
   background: #f3f3f3;
-  font-family: Poppins, 'Noto Sans KR', sans-serif;
+  font-family: Poppins, "Noto Sans KR", sans-serif;
   font-size: 16px;
   font-weight: 500;
+}
+
+#title {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+}
+
+#tagline {
+  color: #818181;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* 이번엔 각 명언을 감싸고 있는 <div> 태그에 스타일을 적용해 봅시다. 
+<div> 태그가 명언에서만 쓰고 있어서  아래처럼 태그 선택자 div를 써도 되지만, 
+
+div {
+  background: #ffffff;
+  margin: 24px auto;
+  padding: 24px;
+  width: 320px;
+} */
+
+/* <div> 태그는 굉장히 다양한 용도로 쓰는 태그이기 때문에 클래스를 사용하는 걸 권장합니다. */
+.card {
+  background: #ffffff;
+  margin: 24px auto;
+  padding: 24px;
+  width: 320px;
+}
+
+.author {
+  color: #818181;
+  font-size: 12px;
+  font-weight: 400;
 }

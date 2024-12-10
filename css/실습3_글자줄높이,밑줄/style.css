@@ -1,0 +1,75 @@
+/* 
+1.줄 높이는 line-height 속성을 씁니다.
+2.텍스트 꾸미기는 text-decoration 속성을 씁니다.
+3.줄 높이는 글자 크기에 상대적인 값으로, 단위 없이 씁니다.
+4.텍스트 꾸미기는 none, underline 등의 속성 값이 있습니다. */
+
+body {
+  background: #fdfafc;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* 이제 <a> 태그의 밑줄을 없애 봅시다. text-decoration: none이라고 하면 밑줄을 제거할 수 있었는데요. 
+이미 주어진 코드에 <a> 태그에 대한 CSS 규칙이 있으니까 여기다 추가해 주겠습니다. */
+
+a {
+  color: #792eb4;
+  /* 밑줄 없애기 */
+  text-decoration: none;
+}
+
+/* 우선 <p> 태그의 줄 높이부터 바꿔 볼게요. 줄 높이는 line-height 속성을 쓰면 되는데요, 
+글자 크기에 상대적인 값이기 때문에 1.5배라면 단위 없이 1.5만 써 주면 됩니다.
+ line-height: 1.5 이렇게요. 모든 <p> 태그에 적용하려면 아래처럼 규칙을 만들어 주면 됩니다. */
+
+p {
+  /* 줄 높이를 글자 크기의 1.5배로 */
+  line-height: 1.5;
+}
+
+.header {
+  background-color: #fcfcfc;
+  border-bottom: 1px solid #efefef;
+  font-family: 'Abril Fatface';
+  font-size: 20px;
+  padding: 14px;
+  text-align: center;
+}
+
+.info {
+  margin: 32px 0;
+  text-align: center;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 900;
+  margin: 8px 0;
+}
+
+.date {
+  color: #bdbdbd;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 8px 0 32px;
+}
+
+.cover {
+  width: 611px;
+}
+
+.content {
+  margin: 32px auto;
+  width: 468px;
+}
+
+.headline {
+  font-weight: 700;
+}
+
+.author {
+  color: #bdbdbd;
+  font-size: 12px;
+}

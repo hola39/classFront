@@ -1,0 +1,79 @@
+/* 
+1.빨강, 초록, 파랑으로 색상을 표현하려면 rgb(0~255, 0~255, 0~255) 로 표현할 수 있습니다. 
+(0~255 는 0에서 255 사이의 정수)
+2.부모 글자 크기에 상대적인 크기로는 em을 사용합니다.
+3.최상위 태그 글자 크기에 상대적인 크기로는 rem을 사용합니다.
+4.불투명도로 색상을 표현하려면 rgb(0~255, 0~255, 0~255, 0~1) 로 표현할 수 있습니다. 
+(0~255는 0에서 255 사이의 정수이고 0~1은 0에서 1 사이의 소수) */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 40px 0;
+  text-align: center;
+}
+
+  /* 우선 IKB 색부터 만들어 볼게요. 빨강 0, 초록 47, 파랑 167이니까 rgb로 표현하면 rgb(0, 47, 167)입니다. 
+  이걸  .artist와 .ikb에 각각 적용해주겠습니다.
+  이번에는 .artist에다가 최상위 태그 글자 크기의 3배를 지정할게요. 
+  최상위 태그 글자에 대한 상대 크기는 rem이라는 단위를 쓰면 되는데요. 
+  3배니까 3rem으로 쓰면 됩니다. 최상위 태그인 <html>에서 글자 크기는 16px이니까 
+  3rem은 실제로 16px * 3 = 48px이 되겠네요. */
+
+.artist {
+  font-family: Rajdhani;
+  font-weight: 700;
+  letter-spacing: 8px;
+  margin: 0;
+
+  color: rgb(0, 47, 167);
+  font-size: 3rem;
+}
+
+/* .title에는 부모 글자 크기의 1.25배를 지정할게요. 
+부모 글자 크기에 대한 상대 크기는 em이라는 단위를 쓰면 된다고 했습니다. 
+1.25배니까 1.25em으로 하면 되겠네요. <html>에서 16px로 지정해 줘서  부모 태그인 
+<body>도 16px 이니까 1.25em은 실제로 16px * 1.25 =  20px이 되겠네요. */
+
+.title {
+  color: #747780;
+  font-weight: 400;
+  margin: 0 0 24px 0;
+
+  font-size: 1.25em;
+}
+/* .ikb에서 세로 마진을 부모 태그 글자 크기의 2.5배, 가로 마진을 auto로 줄 건데요. 
+이렇게 꼭 글자 크기가 아니라도 글자 크기에 상대적인 값을 쓸 수 있습니다. 
+2.5배니까 2.5em이라고 하면 되겠네요. */
+
+.ikb {
+  height: 320px;
+  width: 320px;
+  background-color: rgb(0, 47, 167);
+
+  margin: 2.5em auto;
+}
+
+.info {
+  font-size: 24px;
+}
+
+.location {
+  font-size: 24px;
+  margin: 8px 0;
+}
+
+/* 마지막으로 .date에는 절반 만큼 불투명한 검정색을 만들어 보겠습니다. 
+우선 검정색은 rgb로 나타내면 rgb(0, 0, 0)인데요. 절반만큼 불투명하다고 했으니까 
+rgba로 했을 때 알파 값이 0.5이면 됩니다. 즉 rgba(0, 0, 0, 0.5)입니다. */
+
+.date {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  margin: 8px 0;
+
+  color: rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,102 @@
+/* 
+1.그림자는 box-shadow라는 속성을 사용합니다.
+2.불투명도는 opacity라는 속성을 사용합니다. */
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 0 0 140px;
+}
+
+.header {
+  background-color: #f3f3f3;
+  margin-bottom: 32px;
+  padding: 64px 0px 32px;
+}
+
+.header-container {
+  margin: 0 auto;
+  width: 600px;
+}
+
+.header-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 46px;
+  margin: 8px 0;
+}
+
+.header-description {
+  color: #a6a6a6;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23px;
+  margin: 8px 0;
+}
+
+#desert {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
+    url('./activity-desert.png');
+}
+
+#paragliding {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
+    url('./activity-paragliding.png');
+}
+
+/* 이제 불투명도를 추가합시다. 오리 구경 액티비티는 마감이 되어서 불투명도를 0.3으로 바꿔 줘야 하는데요. 
+불투명도는 opacity라는 속성을 썼으니까 아래와 같은 코드를 추가하면 됩니다. 
+오리 구경 액티비티는 #ducks라는 아이디로 꾸며 주고 있으니까 여기다가 추가해 주면 되겠죠?*/
+
+#ducks {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
+    url('./activity-duck.png');
+
+  opacity: 0.3;
+}
+
+#versailles {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
+    url('./activity-versailles.png');
+}
+
+/* 우선 .activity 클래스에 그림자부터 넣어 볼게요. 그림자는 box-shadow라는 속성을 사용하는데요, 
+주어진 값을 하나씩 보면서 완성해 봅시다. 우선 가로 세로의 값이 각각 0px, 4px이니까, 
+box-shadow: 0px 4px로 써주면 됩니다. 여기다 블러 값 28px을 추가하면 box-shadow: 0px 4px 28px이 되고요. 
+마지막으로 그림자 색상을 추가하면 아래처럼 쓰면 되겠네요. */
+/* 각각의 액티비티 항목은 .activity라는 클래스로 스타일링하고 있으니까 여기다가 추가할게요. */
+
+.activity {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  height: 185px;
+  margin: 24px auto;
+  padding: 40px;
+  width: 520px;
+
+  box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.2);
+
+}
+
+.activity-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 29px;
+  margin: 0;
+}
+
+.activity-date {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 8px 0;
+}
+
+.activity-join {
+  background: rgba(0, 0, 0, 0.15);
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 22px 0;
+  padding: 8px 24px;
+}

@@ -1,0 +1,49 @@
+/* 
+1.박스의 콘텐트를 스크롤 할 수 있게 하려면 overflow 속성을 씁니다.
+2.줄바꿈을 하지 않으려면 white-space 속성을 씁니다. */
+
+html {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+}
+
+body {
+  padding: 24px 40px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 35px;
+}
+
+.section {
+  margin: 24px 0;
+}
+
+.date {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23px;
+  margin: 8px 0;
+}
+
+/* 우선 코드를 살펴보면 .artworks라는 클래스가 있는 <div> 태그 안에 이미지들이 있는데요. 
+실행해 보면 줄바꿈이 돼서 가로로 스크롤이 안 됩니다. 일단 줄바꿈을 하지 않으려면 
+white-space: nowrap 속성을 추가하면 됩니다.
+그런데 이러면 아래 스크린샷처럼 그림들이 한 줄로 나열되면서 가로로 페이지가 커져 버립니다.
+이제 여기다가 overflow라는 속성을 사용해서 스크롤을 하게 해 줍시다. 스크롤 할 수 있기 때문에 
+<div> 태그 밖으로 삐져 나오지 않네요. */
+
+.artworks {
+  margin: 0 -48px;
+
+  overflow: scroll;
+  white-space: nowrap;
+
+}
+
+.artwork {
+  height: 194px;
+  margin-right: 8px;
+}

@@ -1,0 +1,89 @@
+/* 
+1.배경 이미지는 background-image 속성으로 넣습니다.
+2.배경 이미지의 크기는 background-size 속성으로 넣습니다.
+3.배경 이미지의 반복은 background-repeat 속성으로 조절합니다.
+4.배경 이미지의 정렬은 background-position 속성으로 조절합니다.
+5.그라디언트는 linear-gradient()를 사용합니다. */
+
+
+body {
+  background-color: #3c3a4a;
+  font-family: 'Noto Sans KR', sans-serif;
+  padding: 32px;
+}
+
+/* 일단 배경 이미지부터 넣고, 
+그 위에 그라디언트를 추가해 볼게요. 
+background-image 속성을 사용해서 아래처럼 배경 이미지를 추가했습니다. */
+
+.container {
+  width: 400px;
+  background-color: #7352d0;
+  color: #ffffff;
+  margin: 0 auto;
+
+  /* 여기 위에다가 그라디언트를 추가할게요. background-image에 이미지보다 
+  먼저 linear-gradient를 써 주고 쉼표로 연결하면 되는데요.
+  그 전에 일단 linear-gradient 코드를 완성해 봅시다. rgba(159, 84, 209, 0.2)색에서 시작해서 
+  rgba(115, 82, 208, 0.6)색으로 끝난다고 했으니까 차례대로 써 주면 되겠네요. */
+
+  background-image: 
+    linear-gradient(rgba(159, 84, 209, 0.2), rgba(115, 82, 208, 0.6)),  
+    url('bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.thumb {
+  height: 226px;
+}
+
+.progress {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.progress-value {
+  background-color: #5f23e0;
+  width: 20%;
+  height: 4px;
+}
+
+.player {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 14px 24px;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.player-icon {
+  height: 13px;
+  margin-right: 24px;
+}
+
+.player-title {
+  font-weight: 500;
+  margin-right: 16px;
+}
+
+.player-artist {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.song {
+  width: 352px;
+  margin: 8px auto;
+  background-color: #434153;
+  padding: 16px 24px;
+}
+
+.song-title {
+  font-size: 16px;
+  line-height: 23px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.song-artist {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+}
